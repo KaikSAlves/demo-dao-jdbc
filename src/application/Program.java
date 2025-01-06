@@ -11,15 +11,10 @@ import java.util.Date;
 public class Program {
     public static void main(String[] args) {
 
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-        Department d = new Department(1, "books");
-
-        Seller s = new Seller(12,"Kaik", "kaik@gmail.com", new Date(), 3000.0, d);
-
         InterfaceDao<Seller> sellerDao = DaoFactory.createSellerDao();
 
+        System.out.println("====== TESTE 1: seller FindById ======");
         Seller seller = sellerDao.findById(3);
-
         System.out.println(seller);
     }
 }
