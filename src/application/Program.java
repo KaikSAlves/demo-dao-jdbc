@@ -18,6 +18,8 @@ public class Program {
 
         InterfaceDao<Seller> sellerDao = DaoFactory.createSellerDao();
 
-        System.out.println(s);
+        Seller seller = sellerDao.findById(3);
+
+        System.out.println(seller);
     }
 }
